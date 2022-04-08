@@ -19,6 +19,7 @@ const Navbar = () => {
                         <a href={`#${item}`}>{item}</a>
                     </li>
                 ))}
+
             </ul>
 
             {/* Mobile Navigation Bar */}

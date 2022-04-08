@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 // urlFor and client are to connect with backend for images and what to fetch respectively
 import { urlFor, client } from '../../client'
 
@@ -137,4 +137,7 @@ const Work = () => {
     )
 }
 
-export default AppWrap(Work, 'work')
+export default AppWrap(
+    MotionWrap(Work, 'app__works'),
+    'work',
+    "app__primarybg")
