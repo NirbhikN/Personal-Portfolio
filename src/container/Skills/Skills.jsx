@@ -26,7 +26,6 @@ const Skills = () => {
             .then((data) => {
                 setSkills(data)
             })
-
     }, [])
 
     return (
@@ -38,7 +37,6 @@ const Skills = () => {
                 <motion.div className='app__skills-list'>
                     {/* First motion div for skills icon */}
                     {skills.map((skill) => (
-
                         <motion.div
                             whileInView={{ opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
@@ -72,8 +70,8 @@ const Skills = () => {
                             {/* For Experience Works */}
 
                             <motion.div className='app__skills-exp-works'>
-                                {experience.works.map((work) => (
-                                    <>
+                                {experience.works.map((work, index) => (
+                                    <div key={index + work}>
                                         <motion.div
                                             whileInView={{ opacity: [0, 1] }}
                                             transition={{ duration: 0.5 }}
@@ -95,7 +93,7 @@ const Skills = () => {
                                         >
                                             {work.desc}
                                         </ReactTooltip>
-                                    </>
+                                    </div>
                                 ))}
                             </motion.div>
                         </motion.div>
