@@ -70,16 +70,6 @@ const Header = () => {
                 className='app__header-circles'
 
             >
-                {/* Looping through Images */}
-                {/* {[
-                    { img: images.sass, url: 'https://www.google.com' },
-                    { img: images.javascript, url: 'https://www.google.com' },
-                    { img: images.react, url: 'https://www.google.com' },
-                    { img: images.node, url: 'https://www.google.com' },
-                    { img: images.mongodb, url: 'https://www.google.com' }
-                ].map((circle, index) => ( */}
-                {/* <a href={circle.url} target='_blank' rel='noreferrer'> */}
-                {/* </a> */}
                 {[images.sass, images.javascript, images.react, images.node, images.mongodb].map((circle, index) => (
                     <motion.div
                         className="circle-cmp app__flex"

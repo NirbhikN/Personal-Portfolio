@@ -12,6 +12,8 @@ const Navbar = () => {
             <div className='app__navbar-logo'>
                 <img src={images.logo} alt="logo" />
             </div>
+
+
             <ul className='app__navbar-links'>
                 {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                     <li className='app__flex p-text' key={`link-${item}`}>
@@ -19,6 +21,13 @@ const Navbar = () => {
                         <a href={`#${item}`}>{item}</a>
                     </li>
                 ))}
+
+                <li className="app__flex p-text">
+                    <div />
+                    <a href={images.resume} download>
+                        <i className="fa-solid fa-download" /> Resume
+                    </a>
+                </li>
 
             </ul>
 
@@ -40,12 +49,21 @@ const Navbar = () => {
                                         <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                                     </li>
                                 ))}
+
+                                <li>
+                                    <a href={images.resume}
+                                        onClick={() => setToggle(false)}>
+                                        <i className="fa-solid fa-download" /> Resume
+                                    </a>
+                                </li>
+
+
                             </ul>
                         </motion.div>
                     )
                 }
             </div>
-        </nav>
+        </nav >
     )
 }
 

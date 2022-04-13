@@ -84,6 +84,12 @@ const Footer = () => {
             }
 
 
+            <div className="copyright">
+                <p className="p-text">© 2022 NIRBHIK</p>
+                <p className="p-text">All rights reserved</p>
+            </div>
+
+
 
         </>
     )
@@ -91,15 +97,16 @@ const Footer = () => {
 
 // When there is  testimonial section
 
-export default AppWrap(
-    MotionWrap(Footer, 'app__footer'),
-    'contact',
-    'app__whitebg'
-)
-
-// When there is no testimonial section
 // export default AppWrap(
 //     MotionWrap(Footer, 'app__footer'),
 //     'contact',
-//     'app__primarybg'
+//     'app__whitebg'
 // )
+
+// When there is no testimonial section
+
+export default AppWrap(
+    MotionWrap(Footer, 'app__footer'),
+    'contact',
+    'app__primarybg'
+)
